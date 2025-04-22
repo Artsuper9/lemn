@@ -62,7 +62,13 @@ const products = [
   closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
   modalAdd.addEventListener('click', () => { cart++; cartCount.textContent = cart; });
   modalBuy.addEventListener('click', () => alert('Redirecționează la cumpărare pentru ' + currentProduct.title));
-  
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
+
   // Contact form
   const contactForm = document.getElementById('contact-form');
   contactForm.addEventListener('submit', e => {
