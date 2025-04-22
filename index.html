@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PergoleArt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">PergoleArt</div>
+    <ul class="nav-links">
+      <li><a href="#">Acasă</a></li>
+      <li><a href="#about">Despre Noi</a></li>
+      <li><a href="#produse">Produse</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="cart">
+      <img src="aaa.jpg" alt="Coș" />
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Transformă-ți grădina cu PergoleArt</h1>
+      <p>Produse hand-crafted, durabile și estetice pentru orice spațiu exterior</p>
+      <a href="#about" class="btn btn-primary">Află mai multe</a>
+    </div>
+  </header>
+
+  <section id="about" class="container about">
+    <h2>Despre Noi</h2>
+    <p>PergoleArt este un atelier familie dedicat creării de pergole și foișoare unice, inspirate din tradiție și design modern. Fiecare piesă este lucrată manual, cu atenție la detalii și finisaje de calitate superioară.</p>
+    <ul>
+      <li>Experiență de peste 10 ani</li>
+      <li>Materiale din lemn tratat și durabil</li>
+      <li>Proiecte personalizate la cerere</li>
+      <li>Servicii complete: montaj și întreținere</li>
+    </ul>
+  </section>
+
+  <section class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">Toate</button>
+    <button class="filter-btn" data-filter="pergola">Pergole</button>
+    <button class="filter-btn" data-filter="foisor">Foișoare</button>
+  </section>
+
+  <section class="products container" id="produse">
+    <div class="grid"></div>
+  </section>
+
+  <!-- Modal pentru detaliu produs -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div class="modal-actions">
+        <button id="modal-add" class="btn">Adaugă în coș</button>
+        <button id="modal-buy" class="btn">Cumpără</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact" class="container contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <label for="name">Nume:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="message">Mesaj:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit" class="btn btn-primary">Trimite</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PergoleArt. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
